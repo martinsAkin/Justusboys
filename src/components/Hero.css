@@ -1,132 +1,229 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
-.hero-screen{
+.hero-screen {
+    position: relative;
+    overflow: hidden;
+
     background: rgb(1, 14, 1);
     width: 100%;
     height: 100dvh;
+
     font-family: 'Syne', sans-serif;
-
-    .hero-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto 0;
-        gap: 20px;
-        height: 80%;
-        color: white;
-
-
-        .hero-floating{
-            padding: 1rem 2rem;
-            border: 1px solid green;
-            border-radius: 30px;
-            width: max-content;
-            font-size: smaller;
-            background: transparent;
-            background: rgba(142, 248, 151, 0.15);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-        }
-
-        .hero-title{
-            margin-top: 2rem;
-            font-size: 2.5rem;
-            font-weight: 900;
-            text-align: center;
-            color: white;
-            width: 65rem;
-            line-height: 0.9;
-            font-size: 90px;
-
-            .span-white{
-                color: rgb(8, 54, 8);
-            }
-        }
-
-        .hero-description{
-            font-size: 1.5rem;
-            text-align: center;
-            max-width: 600px;
-            line-height: 1.5;
-        }
-
-        .hero-btns{
-            display: flex;
-            gap: 25px;
-            margin-top: 1.5rem;
-
-            .join-brotherhood{
-                background: green;
-                color: white;
-                padding: 16px 25px;
-                border: none;
-                border-radius: 20px;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                gap: 5px;
-            }
-    
-            .our-story{
-                background: transparent;
-                color: white;
-                padding: 16px 25px;
-                border: 1px solid white;
-                border-radius: 20px;
-            }
-        }
-
-    }
-    
 }
 
+/* ---------------- BACKGROUND DOTS ---------------- */
 
-/* tablet */
+.hero-dots {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: radial-gradient(
+        circle,
+        rgba(3, 172, 107, 0.45) 1px,
+        transparent 1px
+    );
+
+    background-size: 28px 28px;
+    opacity: 0.6;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ---------------- GLOW ---------------- */
+
+.hero-glow {
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(3, 172, 107, 0.20) 0%,
+        transparent 65%
+    );
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -58%);
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ---------------- HERO CONTENT ---------------- */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    height: 80%;
+
+    color: white;
+    text-align: center;
+}
+
+/* Floating badge */
+
+.hero-floating {
+    padding: 1rem 2rem;
+
+    border: 1px solid green;
+    border-radius: 30px;
+
+    width: max-content;
+
+    font-size: 0.8rem;
+
+    background: rgba(142, 248, 151, 0.15);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Main title */
+
+.hero-title {
+    margin-top: 2rem;
+
+    width: 65rem;
+
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 0.9;
+
+    color: white;
+}
+
+.hero-title .span-white {
+    color: rgb(8, 54, 8);
+}
+
+/* Description */
+
+.hero-description {
+    max-width: 600px;
+
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Buttons */
+
+.hero-btns {
+    display: flex;
+    gap: 25px;
+
+    margin-top: 1.5rem;
+}
+
+.join-brotherhood {
+    background: green;
+    color: white;
+
+    padding: 16px 25px;
+
+    border: none;
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    transition: 0.3s ease;
+}
+
+.join-brotherhood:hover {
+    background: rgb(0, 160, 0);
+}
+
+.our-story {
+    background: transparent;
+    color: white;
+
+    padding: 16px 25px;
+
+    border: 1px solid white;
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.our-story:hover {
+    background: white;
+    color: black;
+}
+
+/* ---------------- TABLET ---------------- */
+
 @media (max-width: 768px) {
+
     .hero-screen {
         padding: 2rem 1rem;
+    }
 
-        .hero-content {
-            gap: 18px;
+    .hero-title {
+        width: 100%;
+        font-size: 60px;
+        line-height: 1;
+    }
 
-            .hero-title {
-                line-height: 1;
-            }
+    .hero-description {
+        max-width: 90%;
+    }
 
-            .hero-description {
-                max-width: 90%;
-            }
-        }
+    .hero-glow {
+        width: 500px;
+        height: 500px;
     }
 }
 
-
-/* mobile */
+/* ---------------- MOBILE ---------------- */
 
 @media (max-width: 480px) {
-    .hero-screen {
-        .hero-content {
 
-            .hero-floating {
-                font-size: 0.75rem;
-                padding: 0.7rem 1rem;
-            }
+    .hero-content {
+        gap: 18px;
+    }
 
-            .hero-title {
-                width: 100%;
-                font-size: 30px;
-            }
+    .hero-floating {
+        font-size: 0.7rem;
+        padding: 0.7rem 1rem;
+    }
 
-            .hero-description {
-                max-width: 300px;
-                font-size: 0.8rem;
-            }
+    .hero-title {
+        width: 100%;
+        font-size: 38px;
+    }
 
-            .hero-btns {
-               gap: 16px;
+    .hero-description {
+        max-width: 300px;
+        font-size: 0.95rem;
+    }
 
-            }
-        }
+    .hero-btns {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero-glow {
+        width: 350px;
+        height: 350px;
     }
 }

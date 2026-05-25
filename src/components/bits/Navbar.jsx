@@ -1,11 +1,11 @@
 import "./Navbar.css"
-
+import logo from "../../assets/white.png"
 const Navbar = () => {
   return (
     <nav className="navbar">
         <div className="navbar-left">
-            <img src="#" alt="logo" />
-            <h1>Justusboys</h1>
+            <img src={logo} alt="logo" width={100} />
+            {/* <h1>Justusboys</h1> */}
         </div>
         <div className="navbar-right">
             <ul className="items-list">

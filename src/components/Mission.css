@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+.mission{
+    background: #F9F3EB;
+    width: 100%;
+    height: 100dvh;
+    font-family: 'Syne', sans-serif;
+    padding-left:  30rem;
+    padding-top: 9em
+
+
+}
+.top{
+    padding: 1rem 2rem;
+            border: 1px solid green;
+            border-radius: 30px;
+            width: max-content;
+            font-size: smaller;
+            background: transparent;
+            background: rgba(142, 248, 151, 0.15);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+}
+.mission-note h1{
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+.mission-note p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color:grey
+}
+.mission-note{
+    max-width:75%
+}
