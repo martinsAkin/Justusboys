@@ -1,6 +1,7 @@
 
+import Events from './components/Events'
 import Hero from './components/Hero'
-import { Analytics } from './components/bits/Randoms'
+import { Analytics, GetInTouch, Hero2 } from './components/bits/Randoms'
 
 const App = () => {
   
@@ -10,6 +11,9 @@ const App = () => {
     <div>
       <Hero />
       <Analytics />
+      <Events />
+      <Hero2 />
+      <GetInTouch />
     </div>
   )
 }
