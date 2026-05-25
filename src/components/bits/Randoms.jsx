@@ -1,4 +1,4 @@
-import { FaArrowRight, FaClock, FaInstagram, FaLocationDot, FaWhatsapp, FaX, FaXTwitter } from 'react-icons/fa6'
+import { FaArrowRight, FaClock, FaInstagram, FaLocationDot, FaWhatsapp, FaXTwitter } from 'react-icons/fa6'
 import './Randoms.css'
 import '../Hero.css'
 import { FaSms } from 'react-icons/fa'
