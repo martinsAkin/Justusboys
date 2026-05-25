@@ -9,7 +9,7 @@ export const Analytics = () => {
         },
         {
             figure: "40+",
-            wording: "EVENTS HELD "
+            wording: "EVENTS HELD"
         },
         {
             figure: "3+",
@@ -21,19 +21,26 @@ export const Analytics = () => {
         }
     ]
 
-  return (
-    <div className='figures'>
-        {
-            analytics.map((analytic) => (
-                <ul key={analytic.wording}>
-                    <li>
-                        {analytic.figure}
-                        <span className='wording'>{analytic.wording}</span>
-                    </li>
-                </ul>
-            ))
-        }
+    return (
+        <div className='figures'>
+            {analytics.map((analytic, index) => (
+                <div className='analytic-item' key={analytic.wording}>
 
-    </div>
-  )
+                    <div className='content'>
+                        <h2>{analytic.figure}</h2>
+
+                        <span className='wording'>
+                            {analytic.wording}
+                        </span>
+                    </div>
+
+                    {/* Divider */}
+                    {index !== analytics.length - 1 && (
+                        <div className='divider'></div>
+                    )}
+
+                </div>
+            ))}
+        </div>
+    )
 }
