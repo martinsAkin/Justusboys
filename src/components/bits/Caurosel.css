@@ -1,0 +1,172 @@
+.carousel-page {
+  position: relative;
+  background: #0a0a0a;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* ================= BACKGROUND DOTS ================= */
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    rgba(3, 172, 107, 0.45) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ================= GLOW ================= */
+.hero-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(3, 172, 107, 0.2) 0%,
+    transparent 65%
+  );
+  top: 10%;
+  left:10%;
+  transform: translate(-50%, -58%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ================= TITLE ================= */
+.carousel-title {
+  color: #f0ede8;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  font-family: "Courier New", monospace;
+  z-index: 2;
+  position: relative;
+}
+
+/* ================= WRAPPER ================= */
+.carousel-wrapper {
+  position: relative;
+  width: min(680px, 90vw);
+  aspect-ratio: 3 / 2;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+/* ================= IMAGE ================= */
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.carousel-image.animating {
+  opacity: 0;
+  transform: translateX(calc(var(--dir) * 40px));
+}
+
+/* ================= CAPTION ================= */
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  padding: 2rem 1.5rem 1.2rem;
+  pointer-events: none;
+}
+
+.carousel-caption p {
+  color: #f0ede8;
+  margin: 0;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  letter-spacing: 0.08em;
+  font-style: italic;
+}
+
+/* ================= NAV BUTTONS ================= */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+}
+
+.nav:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.nav.left {
+  left: 12px;
+}
+
+.nav.right {
+  right: 12px;
+}
+
+/* ================= DOTS ================= */
+.dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 1.5rem;
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 28px;
+  background: #6ec877;
+}
+
+/* ================= COUNTER ================= */
+.counter {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  margin-top: 1.2rem;
+  font-family: "Courier New", monospace;
+  z-index: 2;
+  position: relative;
+}

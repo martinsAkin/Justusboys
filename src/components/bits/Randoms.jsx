@@ -123,7 +123,7 @@ export const GetInTouch = () => {
         {
             social: "Instagram",
             icon: <FaInstagram />,
-            url: "#"
+            url: "https://www.instagram.com/justusboysafrica/"
         },
         {
             social: "Twitter / X",
@@ -133,12 +133,12 @@ export const GetInTouch = () => {
         {
             social: "Whatsapp",
             icon: <FaWhatsapp />,
-            url: "#"
+            url: "https://wa.me/+2349036249990"
         },
         {
             social: "Email us",
             icon: <FaSms />,
-            url: "#"
+            url: "mailto:info@justusboysafrica.com"
         },
     ]
   return (
