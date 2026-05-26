@@ -142,7 +142,7 @@ export const GetInTouch = () => {
         },
     ]
   return (
-    <div className='event-section'>
+    <div className='get-in-touch'>
         <h5>GET IN TOUCH</h5>
 
         <h1>Find us everywhere.</h1>

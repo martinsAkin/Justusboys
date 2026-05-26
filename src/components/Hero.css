@@ -125,25 +125,19 @@
 .hero-btns {
     display: flex;
     gap: 25px;
-
     margin-top: 1.5rem;
 }
 
 .join-brotherhood {
     background: green;
     color: white;
-
     padding: 16px 25px;
-
     border: none;
     border-radius: 20px;
-
     cursor: pointer;
-
     display: flex;
     align-items: center;
     gap: 5px;
-
     transition: 0.3s ease;
 }
 
@@ -154,14 +148,10 @@
 .our-story {
     background: transparent;
     color: white;
-
     padding: 16px 25px;
-
     border: 1px solid white;
     border-radius: 20px;
-
     cursor: pointer;
-
     transition: 0.3s ease;
 }
 
@@ -218,7 +208,7 @@
     }
 
     .hero-btns {
-        flex-direction: column;
+        flex-direction: row;
         gap: 16px;
     }
 
