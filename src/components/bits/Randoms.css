@@ -1,25 +1,398 @@
+/* =========================
+   FIGURES SECTION
+========================= */
+
 .figures {
-background: rgb(62, 116, 8);
-display: flex;
-gap: 20px;
-align-items: center;
-justify-content: center;
-padding: 30px 0;
-    ul{
-        display: flex;
-        list-style: none;
-        
-        
+    background: rgb(5, 146, 92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
 
-        li{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: xx-large;
+.figures .analytic-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
 
-            span{
-                font-size: small;
-            }
-        }
+.figures .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.figures .content h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: bolder;
+    color: white;
+    margin: 0;
+}
+
+.figures .content .wording {
+    font-size: 0.7rem;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.figures .divider {
+    height: 50px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .figures {
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .figures .content {
+        padding: 0 10px;
+    }
+
+    .figures .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .figures .content .wording {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .figures .divider {
+        height: 35px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .figures {
+        flex-direction: column;
+    }
+
+    .figures .analytic-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .figures .divider {
+        display: none;
+    }
+}
+
+
+/* =========================
+   EVENTS AND GATHERINGS
+========================= */
+
+.event-section {
+    padding: 3rem 30rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    justify-self: center;
+    background-color: #fff;
+}
+
+.event-section h5 {
+    padding: 6px;
+    border: none;
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #bee6d6;
+    width: max-content;
+    color: #005024;
+}
+
+.event-section h1 {
+    margin-top: 1rem;
+    margin-bottom: .6rem;
+}
+
+.event-section .event-description {
+    font-size: 28px;
+    color: gray;
+}
+
+.container {
+    margin-top: 20px;
+    padding: 6px 10px;
+    border: #87c8b8 1px solid;
+    background-color: #F9F3EB;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grouping {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.date {
+    background: #03AC6B;
+    border-radius: 18px;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.details h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.details span {
+    display: flex;
+    align-items: center;
+    color: gray;
+    gap: .5rem;
+}
+
+.entry {
+    padding: 6px;
+    background: rgb(168, 255, 168);
+    color: rgb(0, 82, 22);
+    border: none;
+    border-radius: 25px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   JOIN US
+========================= */
+
+.hero2-screen {
+    background-color: rgb(15, 15, 15);
+    width: 100%;
+    height: max-content;
+    padding: 7rem 0;
+    font-family: 'Syne', sans-serif;
+}
+
+.hero2-screen .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    gap: 20px;
+    height: 80%;
+    color: white;
+}
+
+.hero2-screen .hero-content .hero-floating {
+    padding: 1rem 2rem;
+    border: 1px solid green;
+    border-radius: 30px;
+    width: max-content;
+    font-size: smaller;
+    background: rgba(142, 248, 151, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.hero2-screen .hero-content .hero-title {
+    margin-top: 0.5rem;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    width: 65rem;
+    line-height: 0.9;
+    font-size: 60px;
+}
+
+.hero2-screen .hero-content .hero-title .span-white {
+    color: rgb(8, 54, 8);
+}
+
+.hero2-screen .hero-content .hero-description {
+    font-size: 1.4rem;
+    text-align: center;
+    max-width: 700px;
+    line-height: 1.5;
+}
+
+.hero2-screen .hero-content .hero-input {
+    display: flex;
+    gap: 25px;
+    margin-top: 1rem;
+}
+
+.hero2-screen .hero-content .hero-input .email-input {
+    padding: 8px 15px;
+    border: grey 1px solid;
+    border-radius: 25px;
+    width: 15rem;
+    background-color: rgb(36, 35, 35);
+    color: white;
+}
+
+.hero2-screen .hero-content .hero-input .join-brotherhood {
+    background: green;
+    color: white;
+    padding: 16px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+.social-media button {
+    border: none;
+    border-radius: 20px;
+    background: rgb(211, 205, 205);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+    .event-section {
+        padding: 3rem 10rem;
+    }
+
+    .hero2-screen .hero-content .hero-title {
+        width: 90%;
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .event-section {
+        padding: 2rem;
+    }
+
+    .event-section .event-description {
+        font-size: 18px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .grouping {
+        width: 100%;
+    }
+
+    .details h2 {
+        font-size: 20px;
+    }
+
+    .hero2-screen {
+        padding: 5rem 1rem;
+    }
+
+    .hero2-screen .hero-content .hero-title {
+        width: 100%;
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .hero2-screen .hero-content .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hero2-screen .hero-content .hero-input {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero2-screen .hero-content .hero-input .email-input {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .social-media {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .date {
+        font-size: 16px;
+        padding: .8rem;
+    }
+
+    .details h2 {
+        font-size: 18px;
+    }
+
+    .entry {
+        font-size: 10px;
+    }
+
+    .hero2-screen .hero-content .hero-title {
+        font-size: 30px;
+    }
+
+    .hero2-screen .hero-content .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .social-media button {
+        padding: 14px;
     }
 }
