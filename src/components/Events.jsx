@@ -13,7 +13,7 @@ const Events = () => {
           <EventsComponent
             month={"JUL"}
             day={"18"}
-            event_title={"Monthly Brotherhood Meetup"}
+            event_title={"Monthly Circle Meetup"}
             location={"Lagos Island"}
             time={"10:00 AM"}
             mode_of_entry={"Free entry"}

@@ -12,7 +12,7 @@ import image8 from "../../assets/image_08.png";
 import image9 from "../../assets/image_09.png";
 
 const IMAGES = [
-  { src: image1, caption: "Brotherhood & Unity" },
+  { src: image1, caption: "Circle & Unity" },
   { src: image2, caption: "Real Talk. Real Men. Real Growth." },
   { src: image3, caption: "Lifting Each Other Up" },
   { src: image4, caption: "Learning Together" },

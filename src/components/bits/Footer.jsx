@@ -11,7 +11,7 @@ const Footer = () => {
         </h2>
 
         <p className="footer-text">
-          Brotherhood for growth, accountability & real conversations.
+          Community for growth, accountability & real conversations.
         </p>
 
         <div className="footer-links">

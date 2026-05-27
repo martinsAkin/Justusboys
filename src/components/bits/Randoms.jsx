@@ -20,7 +20,7 @@ export const Analytics = () => {
         },
         {
             figure: 1,
-            wording: "BROTHERHOOD"
+            wording: "COMMUNITY"
         }
     ]
 
@@ -97,7 +97,7 @@ export const Hero2 = () => {
           </div>
   
           <div className="hero-description">
-            <span>Step into a community pf men who are growing , learning and showing up for each other every day. Drop your email and we&#39;ll reach out.</span>
+            <span>Step into a community of men who are growing , learning and showing up for each other every day. Drop your email and we&#39;ll reach out.</span>
           </div>
   
           <div className='hero-input'>
@@ -107,7 +107,7 @@ export const Hero2 = () => {
                 className='email-input'
                 placeholder='Your email address'
             />
-            <button className='join-brotherhood'>Join the Brotherhood <FaArrowRight /></button>
+            <button className='join-brotherhood'>Join the Circle <FaArrowRight /></button>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@ export const GetInTouch = () => {
         {
             social: "Twitter / X",
             icon: <FaXTwitter />,
-            url: "#"
+            url: "https://x.com/Justusboysafric?s=20"
         },
         {
             social: "Whatsapp",

@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className='hero-content'>
         <h1 className='hero-floating'>
-          A BROTHERHOOD FOR THE REAL ONES
+          A CIRCLE FOR THE REAL ONES
         </h1>
 
         <div className='hero-title'>
@@ -33,7 +33,7 @@ const Hero = () => {
 
         <div className='hero-btns'>
           <button className='join-brotherhood'>
-            Join the Brotherhood <FaArrowRight />
+            Join the Circle <FaArrowRight />
           </button>
 
           <button className='our-story'>

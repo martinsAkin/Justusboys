@@ -1,5 +1,5 @@
 // MissionSection.jsx
-import React from "react";
+
 import "./Mission.css";
 
 const MissionSection = () => {
@@ -30,7 +30,7 @@ const MissionSection = () => {
         <div className="mission-cards">
           <div className="card">
             <div className="icon">🤝</div>
-            <h3>Brotherhood</h3>
+            <h3>Circle</h3>
             <p>Real bonds, real support, built to last.</p>
           </div>
 
